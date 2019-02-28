@@ -71,8 +71,8 @@ def main():
 			listing = folder
 			folder = options.input + folder + '/'
 
-			fields = {}
-			fields['sourcelistingid'] = listing
+			fields = []
+			fields.append({'field':'SourceListingID', 'value':listing})
 			roomCount = {}
 
 			for image in os.listdir(folder):
@@ -96,12 +96,12 @@ def main():
 					else:
 						description = ''
 
+
+					room = 'noroom'	
 					for item in roomTypes:
 						if item in description:
 							room = item.strip()
 							break
-						else:
-							room = 'noroom'
 							
 					####################### Clarifai
 					response = model.predict_by_filename(image_path)
@@ -117,12 +117,12 @@ def main():
 					else:
 						roomCount[room] = 0
 
-					fields['clarifai_' + room + '_' + str(roomCount[room])] = concepts
+					fields.append({'field':'clarifai_' + room + '_' + str(roomCount[room]), 'value':concepts})
 
 					print 'Done with photo: ' + image
 
 					#Avoiding 'Too Many Requests'
-					time.sleep(5)
+					#time.sleep(5)
 
 					continue
 				else:
@@ -136,7 +136,7 @@ def main():
 			print 'Done with listing: ' + listing
 
 			#Avoiding 'Too Many Requests'
-			time.sleep(10)			
+			#time.sleep(10)			
 
 
 	with open(options.input + '/' + 'output.json', 'w') as outfile:
