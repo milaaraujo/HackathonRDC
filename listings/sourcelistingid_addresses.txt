@@ -1,0 +1,15 @@
+sourcelistingid	LstAdrFullAddress		LeaseOptionConsidered
+33754406	158 E 100TH ST. unit: Ground Fl	Sale
+18197377	308 Prospect Avenue unit: 4 R	Lease
+504286415	2 GOLD Street unit: 5101	Lease
+1031345416	409 East 87th Street unit: 2S	Lease
+504325417	207 East 30TH Street unit: 4	Lease
+1031284418	140 East 46th Street unit: 5B	Lease
+1031284420	140 East 46th Street unit: 2H	Lease
+1031388421	450 E 84TH ST. unit: 1r	Lease
+1031288422	8 West 9th Street unit: 9	Lease
+33735422	188 E 70TH ST. unit: 14B	Lease
+504295422	165 East 35th Street unit: 12	Lease
+181110425	567 Warren Street unit: 201	Lease
+1031376345	23-33 31st Road unit: 4J	Lease
+1031356434	219 East 81st Street unit: 3B	Lease

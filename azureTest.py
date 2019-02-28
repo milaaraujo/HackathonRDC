@@ -46,7 +46,10 @@ def main():
 
 			analysis = response.json()
 
-			description = analysis["description"]["captions"][0]["text"].capitalize()
+			if analysis["description"]["captions"]:
+				description = analysis["description"]["captions"][0]["text"].capitalize()
+			else:
+				description = ''
 
 			categories = []
 			for category in analysis['categories']:
